@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SpaceX Viewer Application
+Bundle-SymbolicName: com.modumind.spacex.app;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Modular Mind, Ltd.
+Require-Bundle: javax.inject;bundle-version="0.0.0",
+ org.eclipse.core.runtime;bundle-version="0.0.0",
+ org.eclipse.swt;bundle-version="0.0.0",
+ org.eclipse.e4.ui.model.workbench;bundle-version="0.0.0",
+ org.eclipse.jface;bundle-version="0.0.0",
+ org.eclipse.e4.ui.services;bundle-version="0.0.0",
+ org.eclipse.e4.ui.workbench;bundle-version="0.0.0",
+ org.eclipse.e4.core.di;bundle-version="0.0.0",
+ org.eclipse.e4.ui.di;bundle-version="0.0.0",
+ org.eclipse.e4.core.contexts;bundle-version="0.0.0",
+ com.modumind.spacex.service;bundle-version="1.0.0",
+ org.eclipse.core.databinding;bundle-version="1.8.0",
+ org.eclipse.core.databinding.beans;bundle-version="1.6.100",
+ org.eclipse.core.databinding.property;bundle-version="1.8.0",
+ org.eclipse.jface.databinding;bundle-version="1.11.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: javax.annotation;version="0.0.0"
+Automatic-Module-Name: com.modumind.spacex.app

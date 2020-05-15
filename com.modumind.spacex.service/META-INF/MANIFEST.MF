@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SpaceX REST Service
+Bundle-SymbolicName: com.modumind.spacex.service
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Modular Mind, Ltd.
+Automatic-Module-Name: com.modumind.spacex.client
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: com.fasterxml.jackson.annotation;version="2.10.1",
+ com.fasterxml.jackson.databind;version="2.10.1",
+ com.fasterxml.jackson.databind.annotation;version="2.10.1",
+ javax.annotation;version="0.0.0",
+ javax.ws.rs;version="2.1.5",
+ javax.ws.rs.core;version="2.1.5"
+Export-Package: com.modumind.spacex.service,
+ com.modumind.spacex.service.model
+Remote-Service: OSGI-INF/LaunchService_EDEF.xml
+Service-Component: OSGI-INF/SpaceXFacade.xml
+Bundle-ActivationPolicy: lazy

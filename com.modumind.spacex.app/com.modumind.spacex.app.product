@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="com.modumind.spacex.app" id="com.modumind.spacex.app.product" application="org.eclipse.e4.ui.workbench.swt.E4Application" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <vmArgs>-Dorg.eclipse.ecf.osgi.services.remoteserviceadmin.console.rsadebug=false
+      </vmArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
+      </vmArgsMac>
+   </launcherArgs>
+
+   <windowImages/>
+
+   <launcher>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+   </vm>
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="com.modumind.spacex.feature" installMode="root"/>
+      <feature id="org.eclipse.emf.ecore" installMode="root"/>
+      <feature id="org.eclipse.emf.common" installMode="root"/>
+      <feature id="org.eclipse.e4.rcp" installMode="root"/>
+      <feature id="org.eclipse.ecf.core.feature" installMode="root"/>
+      <feature id="org.eclipse.ecf.discovery.feature" installMode="root"/>
+      <feature id="org.eclipse.ecf.osgi.services.feature" installMode="root"/>
+      <feature id="org.eclipse.ecf.remoteservice.feature" installMode="root"/>
+      <feature id="org.eclipse.ecf.provider.jersey.client.feature" installMode="root"/>
+   </features>
+
+   <configurations>
+      <plugin id="org.eclipse.ecf.osgi.services.distribution" autoStart="true" startLevel="0" />
+      <plugin id="org.glassfish.jersey.core.jersey-common" autoStart="true" startLevel="0" />
+   </configurations>
+
+</product>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?>
+<target name="spacex">
+	<locations>
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+			<repository location="https://raw.githubusercontent.com/ECF/JaxRSProviders/master/build"/>
+			<unit id="org.eclipse.ecf.provider.jersey.client.feature.feature.group" version="1.13.2.202005022010"/>
+		</location>
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+			<repository location="http://download.eclipse.org/releases/latest"/>
+			<unit id="org.eclipse.ecf.core.feature.feature.group" version="1.5.500.v20200217-1548"/>
+			<unit id="org.eclipse.ecf.core.feature.source.feature.group" version="1.5.500.v20200217-1548"/>
+		</location>
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+			<repository location="http://download.eclipse.org/releases/latest"/>
+			<unit id="org.eclipse.equinox.core.sdk.feature.group" version="3.19.200.v20200214-1600"/>
+		</location>
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+			<repository location="http://download.eclipse.org/releases/latest"/>
+			<unit id="org.eclipse.e4.rcp.feature.group" version="4.15.0.v20200304-0601"/>
+			<unit id="org.eclipse.e4.rcp.source.feature.group" version="4.15.0.v20200304-0601"/>
+		</location>
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+			<repository location="http://download.eclipse.org/releases/latest"/>
+			<unit id="org.eclipse.emf.common.feature.group" version="2.18.0.v20191225-1014"/>
+			<unit id="org.eclipse.emf.common.source.feature.group" version="2.18.0.v20191225-1014"/>
+			<unit id="org.eclipse.emf.ecore.feature.group" version="2.21.0.v20200127-1342"/>
+			<unit id="org.eclipse.emf.ecore.source.feature.group" version="2.21.0.v20200127-1342"/>
+		</location>
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+			<repository location="https://download.eclipse.org/tools/orbit/downloads/drops/R20200224183213/repository"/>
+			<unit id="javax.activation" version="1.1.0.v201211130549"/>
+		</location>
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+			<repository location="https://download.eclipse.org/tools/orbit/downloads/drops/R20200224183213/repository"/>
+			<unit id="javax.servlet" version="3.1.0.v201410161800"/>
+		</location>
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+			<repository location="http://download.eclipse.org/releases/latest"/>
+			<unit id="org.eclipse.ecf.remoteservice.sdk.feature.feature.group" version="3.14.7.v20200217-0120"/>
+		</location>
+	</locations>
+</target>
