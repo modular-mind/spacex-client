@@ -15,6 +15,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.TableColumn;
 
+import com.modumind.spacex.service.LaunchService;
 import com.modumind.spacex.service.SpaceXFacade;
 import com.modumind.spacex.service.model.Launch;
 
@@ -29,7 +30,9 @@ public class LaunchPart {
 	public void createComposite(Composite parent) {
 		createTableViewer(parent);
 		
-		List<Launch> launches = spaceXFacade.getLaunchService().getLaunches();
+		LaunchService launchService = spaceXFacade.getLaunchService();
+		List<Launch> launches = launchService.getLaunches();
+		
 		WritableList<Launch> input = new WritableList<Launch>(launches, Launch.class);
 		ViewerSupport.bind(launchViewer, input, PojoProperties.values(new String[] { "flightNumber", "missionName" }));
 	}
