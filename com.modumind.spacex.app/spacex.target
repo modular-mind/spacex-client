@@ -4,24 +4,13 @@
 	<locations>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 			<repository location="http://download.eclipse.org/releases/latest"/>
-			<unit id="org.eclipse.ecf.core.feature.feature.group" version="1.5.500.v20200217-1548"/>
-			<unit id="org.eclipse.ecf.core.feature.source.feature.group" version="1.5.500.v20200217-1548"/>
-		</location>
-		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-			<repository location="http://download.eclipse.org/releases/latest"/>
-			<unit id="org.eclipse.ecf.remoteservice.sdk.feature.feature.group" version="3.14.7.v20200217-0120"/>
-		</location>
-		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-			<repository location="http://download.eclipse.org/releases/latest"/>
 			<unit id="org.eclipse.e4.rcp.feature.group" version="4.15.0.v20200304-0601"/>
-			<unit id="org.eclipse.e4.rcp.source.feature.group" version="4.15.0.v20200304-0601"/>
-		</location>
-		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-			<repository location="http://download.eclipse.org/releases/latest"/>
 			<unit id="org.eclipse.emf.common.feature.group" version="2.18.0.v20191225-1014"/>
-			<unit id="org.eclipse.emf.common.source.feature.group" version="2.18.0.v20191225-1014"/>
 			<unit id="org.eclipse.emf.ecore.feature.group" version="2.21.0.v20200127-1342"/>
-			<unit id="org.eclipse.emf.ecore.source.feature.group" version="2.21.0.v20200127-1342"/>
+			<unit id="org.eclipse.ecf.core.feature.feature.group" version="1.5.500.v20200217-1548"/>
+			<unit id="org.eclipse.ecf.discovery.feature.feature.group" version="1.0.101.v20191023-2007"/>
+			<unit id="org.eclipse.ecf.osgi.services.feature.feature.group" version="2.5.1.v20200217-0120"/>
+			<unit id="org.eclipse.ecf.remoteservice.feature.feature.group" version="2.5.102.v20191031-1454"/>
 		</location>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 			<repository location="https://raw.githubusercontent.com/ECF/JaxRSProviders/master/build"/>
