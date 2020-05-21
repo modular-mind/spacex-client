@@ -19,6 +19,7 @@
 
    <requires>
       <import feature="org.eclipse.e4.rcp" version="4.15.0.v20200304-0601"/>
+      <import feature="org.eclipse.ecf.provider.jersey.client.feature" version="1.13.3.202005192003"/>
    </requires>
 
    <plugin
