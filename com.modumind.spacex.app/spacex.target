@@ -14,7 +14,7 @@
 		</location>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 			<repository location="https://raw.githubusercontent.com/ECF/JaxRSProviders/master/build"/>
-			<unit id="org.eclipse.ecf.provider.jersey.client.feature.feature.group" version="1.13.3.202005192003"/>
+			<unit id="org.eclipse.ecf.provider.jersey.client.feature.feature.group" version="0.0.0"/>
 		</location>
 	</locations>
 </target>
