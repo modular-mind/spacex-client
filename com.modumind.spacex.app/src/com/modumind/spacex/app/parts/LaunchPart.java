@@ -7,6 +7,7 @@ import javax.inject.Inject;
 
 import org.eclipse.core.databinding.beans.typed.PojoProperties;
 import org.eclipse.core.databinding.observable.list.WritableList;
+import org.eclipse.e4.core.di.extensions.Service;
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.e4.ui.di.Persist;
 import org.eclipse.jface.databinding.viewers.ViewerSupport;
@@ -16,13 +17,14 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.TableColumn;
 
 import com.modumind.spacex.service.LaunchService;
-import com.modumind.spacex.service.SpaceXFacade;
 import com.modumind.spacex.service.model.Launch;
 
+@SuppressWarnings("restriction")
 public class LaunchPart {
 
 	@Inject
-	private SpaceXFacade spaceXFacade;
+	@Service
+	private LaunchService launchService;
 
 	private TableViewer launchViewer;
 
@@ -30,7 +32,6 @@ public class LaunchPart {
 	public void createComposite(Composite parent) {
 		createTableViewer(parent);
 		
-		LaunchService launchService = spaceXFacade.getLaunchService();
 		List<Launch> launches = launchService.getLaunches();
 		
 		WritableList<Launch> input = new WritableList<Launch>(launches, Launch.class);
