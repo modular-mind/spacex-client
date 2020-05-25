@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="false" name="com.modumind.spacex.service.SpaceXFacade">
-   <implementation class="com.modumind.spacex.service.SpaceXFacade"/>
-   <service>
-      <provide interface="com.modumind.spacex.service.SpaceXFacade"/>
-   </service>
-  <reference bind="setLaunchService" cardinality="0..1" interface="com.modumind.spacex.service.LaunchService" name="LaunchService" policy="dynamic"/>
-</scr:component>

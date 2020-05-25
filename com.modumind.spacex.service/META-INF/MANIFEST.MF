@@ -15,5 +15,4 @@ Import-Package: com.fasterxml.jackson.annotation;version="2.10.1",
 Export-Package: com.modumind.spacex.service,
  com.modumind.spacex.service.model
 Remote-Service: OSGI-INF/LaunchService_EDEF.xml
-Service-Component: OSGI-INF/SpaceXFacade.xml
 Bundle-ActivationPolicy: lazy
