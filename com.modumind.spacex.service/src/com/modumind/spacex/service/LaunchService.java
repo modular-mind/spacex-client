@@ -1,6 +1,7 @@
 package com.modumind.spacex.service;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -22,10 +23,10 @@ public interface LaunchService {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("/")
-	public List<Launch> getLaunches();
-	
+	List<Launch> getLaunches();
+
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	@Path("/latest")
-	public Launch getLatestLaunch();
+	@Path("/")
+	CompletableFuture<List<Launch>> getLaunchesAsync();
 }

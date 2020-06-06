@@ -1,6 +1,7 @@
 package com.modumind.spacex.app.parts;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
@@ -14,6 +15,7 @@ import org.eclipse.jface.databinding.viewers.ViewerSupport;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.TableColumn;
 
 import com.modumind.spacex.service.LaunchService;
@@ -31,11 +33,13 @@ public class LaunchPart {
 	@PostConstruct
 	public void createComposite(Composite parent) {
 		createTableViewer(parent);
-		
-		List<Launch> launches = launchService.getLaunches();
-		
-		WritableList<Launch> input = new WritableList<Launch>(launches, Launch.class);
-		ViewerSupport.bind(launchViewer, input, PojoProperties.values(new String[] { "flightNumber", "missionName" }));
+
+		/*
+		 * All you need to do to toggle between Sync and Async is to comment out the
+		 * appropriate method
+		 */
+		setLaunchesSync();
+//		setLaunchesAsync();
 	}
 
 	@Focus
@@ -60,5 +64,31 @@ public class LaunchPart {
 		TableColumn tblColumnMsg = new TableColumn(launchViewer.getTable(), SWT.NONE);
 		tblColumnMsg.setWidth(300);
 		tblColumnMsg.setText("Mission Name");
+	}
+
+	private void setLaunchesSync() {
+		List<Launch> launches = launchService.getLaunches();
+
+		WritableList<Launch> input = new WritableList<Launch>(launches, Launch.class);
+		ViewerSupport.bind(launchViewer, input, PojoProperties.values(new String[] { "flightNumber", "missionName" }));
+	}
+
+	private void setLaunchesAsync() {
+		CompletableFuture<List<Launch>> launchesFuture = null;
+		launchesFuture = launchService.getLaunchesAsync();
+
+		if (launchesFuture != null) {
+			launchesFuture.thenAccept((launches) -> {
+				Display.getDefault().asyncExec(new Runnable() {
+
+					@Override
+					public void run() {
+						WritableList<Launch> input = new WritableList<Launch>(launches, Launch.class);
+						ViewerSupport.bind(launchViewer, input,
+								PojoProperties.values(new String[] { "flightNumber", "missionName" }));
+					}
+				});
+			});
+		}
 	}
 }
