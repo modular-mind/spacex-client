@@ -38,8 +38,8 @@ public class LaunchPart {
 		 * All you need to do to toggle between Sync and Async is to comment out the
 		 * appropriate method
 		 */
-		setLaunchesSync();
-//		setLaunchesAsync();
+//		setLaunchesSync();
+		setLaunchesAsync();
 	}
 
 	@Focus
