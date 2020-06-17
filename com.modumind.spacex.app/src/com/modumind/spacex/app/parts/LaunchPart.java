@@ -34,8 +34,8 @@ public class LaunchPart {
 		createTableViewer(parent);
 
 		/*
-		 * All you need to do to toggle between Sync and Async is to comment out the
-		 * appropriate method
+		 * All you need to do to toggle between synchronous and asynchronous calls is to
+		 * switch the comments.
 		 */
 //		retrieveLaunches();
 		retrieveLaunchesAsync();
@@ -88,10 +88,9 @@ public class LaunchPart {
 			});
 		}
 	}
-	
+
 	private void setLaunchesIntoTable(List<Launch> launches) {
 		WritableList<Launch> input = new WritableList<Launch>(launches, Launch.class);
-		ViewerSupport.bind(launchViewer, input,
-				PojoProperties.values(new String[] { "flightNumber", "missionName" }));
+		ViewerSupport.bind(launchViewer, input, PojoProperties.values(new String[] { "flightNumber", "missionName" }));
 	}
 }
