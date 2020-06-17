@@ -37,8 +37,8 @@ public class LaunchPart {
 		 * All you need to do to toggle between synchronous and asynchronous calls is to
 		 * switch the comments.
 		 */
-//		retrieveLaunches();
-		retrieveLaunchesAsync();
+		retrieveLaunches();
+//		retrieveLaunchesAsync();
 	}
 
 	@Focus
