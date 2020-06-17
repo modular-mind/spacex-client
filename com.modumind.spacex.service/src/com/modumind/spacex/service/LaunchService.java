@@ -23,10 +23,15 @@ public interface LaunchService {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("/")
-	List<Launch> getLaunches();
+	public List<Launch> getLaunches();
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("/")
-	CompletableFuture<List<Launch>> getLaunchesAsync();
+	public CompletableFuture<List<Launch>> getLaunchesAsync();
+
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/latest")
+	public Launch getLatestLaunch();
 }

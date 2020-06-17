@@ -21,7 +21,6 @@ import org.eclipse.swt.widgets.TableColumn;
 import com.modumind.spacex.service.LaunchService;
 import com.modumind.spacex.service.model.Launch;
 
-@SuppressWarnings("restriction")
 public class LaunchPart {
 
 	@Inject
@@ -38,8 +37,8 @@ public class LaunchPart {
 		 * All you need to do to toggle between Sync and Async is to comment out the
 		 * appropriate method
 		 */
-//		setLaunchesSync();
-		setLaunchesAsync();
+//		retrieveLaunches();
+		retrieveLaunchesAsync();
 	}
 
 	@Focus
@@ -66,14 +65,14 @@ public class LaunchPart {
 		tblColumnMsg.setText("Mission Name");
 	}
 
-	private void setLaunchesSync() {
+	private void retrieveLaunches() {
 		List<Launch> launches = launchService.getLaunches();
-
+		setLaunchesIntoTable(launches);
 		WritableList<Launch> input = new WritableList<Launch>(launches, Launch.class);
 		ViewerSupport.bind(launchViewer, input, PojoProperties.values(new String[] { "flightNumber", "missionName" }));
 	}
 
-	private void setLaunchesAsync() {
+	private void retrieveLaunchesAsync() {
 		CompletableFuture<List<Launch>> launchesFuture = null;
 		launchesFuture = launchService.getLaunchesAsync();
 
@@ -83,12 +82,16 @@ public class LaunchPart {
 
 					@Override
 					public void run() {
-						WritableList<Launch> input = new WritableList<Launch>(launches, Launch.class);
-						ViewerSupport.bind(launchViewer, input,
-								PojoProperties.values(new String[] { "flightNumber", "missionName" }));
+						setLaunchesIntoTable(launches);
 					}
 				});
 			});
 		}
+	}
+	
+	private void setLaunchesIntoTable(List<Launch> launches) {
+		WritableList<Launch> input = new WritableList<Launch>(launches, Launch.class);
+		ViewerSupport.bind(launchViewer, input,
+				PojoProperties.values(new String[] { "flightNumber", "missionName" }));
 	}
 }
