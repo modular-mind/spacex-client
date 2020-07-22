@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="com.modumind.spacex.service.extension.LaunchServiceObjectMapperResolver">
+   <service>
+      <provide interface="javax.ws.rs.ext.ContextResolver"/>
+   </service>
+   <implementation class="com.modumind.spacex.service.extension.LaunchServiceObjectMapperResolver"/>
+</scr:component>
