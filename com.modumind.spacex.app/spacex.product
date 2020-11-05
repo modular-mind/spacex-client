@@ -8,6 +8,7 @@
 
    <launcherArgs>
       <vmArgs>-Dorg.eclipse.ecf.osgi.services.remoteserviceadmin.console.rsadebug=false
+-Dorg.eclipse.ecf.osgi.services.remoteserviceadmin.EndpointDescriptionLocator.localPropertiesProfile=test
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
       </vmArgsMac>
