@@ -72,6 +72,7 @@ public class LaunchPart {
 		ViewerSupport.bind(launchViewer, input, PojoProperties.values(new String[] { "flightNumber", "missionName" }));
 	}
 
+	@SuppressWarnings("unused")
 	private void retrieveLaunchesAsync() {
 		CompletableFuture<List<Launch>> launchesFuture = null;
 		launchesFuture = launchService.getLaunchesAsync();
