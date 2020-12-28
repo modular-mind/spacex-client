@@ -5,7 +5,7 @@
 		<!-- Properties unique to service -->
 		
 		<!-- Endpoint URL now provided by properties files -->
-		<!-- property name="ecf.endpoint.id" value-type="String" value="https://api.spacexdata.com/v3" /-->
+		<property name="ecf.endpoint.id" value-type="String" value="https://api.spacexdata.com/v3" />
 
 		<property name="objectClass" value-type="String">
 			<array>

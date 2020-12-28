@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Test
+Bundle-SymbolicName: com.modumind.spacex.service.test
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: MODUMIND
+Fragment-Host: com.modumind.spacex.service;bundle-version="1.0.0"
+Automatic-Module-Name: com.modumind.spacex.service.test
+Bundle-RequiredExecutionEnvironment: JavaSE-13
+Require-Bundle: org.junit,
+ org.junit.jupiter.api
+Import-Package: org.osgi.framework;version="1.10.0",
+ org.osgi.util.tracker;version="1.5.2"
