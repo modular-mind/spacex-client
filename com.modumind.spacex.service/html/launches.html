@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<!--
+    WARNING! Make sure that you match all Quasar related
+    tags to the same version! (Below it's "@1.14.5")
+  -->
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet"
+        type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/quasar@1.14.5/dist/quasar.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <div id="app">
+        <div class="q-pa-md">
+            <q-table :data="data" :columns="columns" row-key="name" dark color="amber"></q-table>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@^2.0.0/dist/vue.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/quasar@1.14.5/dist/quasar.umd.min.js"></script>
+        <script src="launches.js"></script>
+</body>
+
+</html>

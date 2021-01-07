@@ -16,6 +16,7 @@
                name="appName"
                value="com.modumind.spacex.app">
          </property>
+         <!--property name="cssTheme" value="org.eclipse.e4.ui.css.theme.e4_dark"/-->
       </product>
    </extension>
 

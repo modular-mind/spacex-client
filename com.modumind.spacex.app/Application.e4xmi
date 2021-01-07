@@ -4,6 +4,7 @@
     <children xsi:type="basic:PartSashContainer" xmi:id="_6wlLksgZEeSyMNYR5xypkQ" elementId="com.modumind.spacex.app.partsashcontainer.sample">
       <children xsi:type="basic:PartStack" xmi:id="_6wlLk8gZEeSyMNYR5xypkQ" elementId="com.modumind.spacex.app.partstack.sample">
         <children xsi:type="basic:Part" xmi:id="_6wlLlMgZEeSyMNYR5xypkQ" elementId="com.modumind.spacex.app.part.launch" contributionURI="bundleclass://com.modumind.spacex.app/com.modumind.spacex.app.parts.LaunchPart" label="SpaceX Launches" iconURI="platform:/plugin/com.modumind.spacex.app/icons/home.png"/>
+        <children xsi:type="basic:Part" xmi:id="_SuR7oFEwEeuqCf3JLIESEw" elementId="com.modumind.spacex.app.webpart.launch" contributionURI="bundleclass://com.modumind.spacex.app/com.modumind.spacex.app.parts.LaunchWebPart" label="SpaceX Launches - Web" iconURI="platform:/plugin/com.modumind.spacex.app/icons/home.png"/>
       </children>
     </children>
     <mainMenu xmi:id="_6wlLicgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.main.menu">

@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: SpaceX REST Service
-Bundle-SymbolicName: com.modumind.spacex.service
+Bundle-SymbolicName: com.modumind.spacex.service;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: Modular Mind, Ltd.
 Automatic-Module-Name: com.modumind.spacex.client
@@ -20,4 +20,5 @@ Remote-Service: OSGI-INF/LaunchService_EDEF.properties
 Bundle-ActivationPolicy: lazy
 Service-Component: OSGI-INF/com.modumind.spacex.service.extension.LaunchServiceClientRequestFilter.xml,
  OSGI-INF/com.modumind.spacex.service.extension.LaunchServiceObjectMapperResolver.xml
-Require-Bundle: jakarta.ws.rs-api
+Require-Bundle: jakarta.ws.rs-api,
+ org.eclipse.equinox.http.registry;bundle-version="1.2.0"
