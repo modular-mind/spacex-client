@@ -3,13 +3,13 @@ package com.modumind.spacex.service.model;
 public class Launch {
 
 	private String flightNumber;
-	private String missionName;
+	private String name;
 	
 	public String getFlightNumber() {
 		return flightNumber;
 	}
 	
-	public String getMissionName() {
-		return missionName;
+	public String getName() {
+		return name;
 	}
 }

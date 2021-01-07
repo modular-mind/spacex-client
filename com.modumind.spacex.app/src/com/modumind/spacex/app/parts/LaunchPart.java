@@ -69,7 +69,7 @@ public class LaunchPart {
 		List<Launch> launches = launchService.getLaunches();
 		setLaunchesIntoTable(launches);
 		WritableList<Launch> input = new WritableList<Launch>(launches, Launch.class);
-		ViewerSupport.bind(launchViewer, input, PojoProperties.values(new String[] { "flightNumber", "missionName" }));
+		ViewerSupport.bind(launchViewer, input, PojoProperties.values(new String[] { "flightNumber", "name" }));
 	}
 
 	private void retrieveLaunchesAsync() {
@@ -91,6 +91,6 @@ public class LaunchPart {
 
 	private void setLaunchesIntoTable(List<Launch> launches) {
 		WritableList<Launch> input = new WritableList<Launch>(launches, Launch.class);
-		ViewerSupport.bind(launchViewer, input, PojoProperties.values(new String[] { "flightNumber", "missionName" }));
+		ViewerSupport.bind(launchViewer, input, PojoProperties.values(new String[] { "flightNumber", "name" }));
 	}
 }
