@@ -42,6 +42,7 @@
 
    <configurations>
       <plugin id="org.eclipse.ecf.osgi.services.distribution" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.ecf.provider.jersey.client" autoStart="true" startLevel="0" />
       <plugin id="org.glassfish.jersey.core.jersey-common" autoStart="true" startLevel="0" />
    </configurations>
 
