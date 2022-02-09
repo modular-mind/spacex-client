@@ -18,7 +18,7 @@ Export-Package: com.modumind.spacex.service,
  com.modumind.spacex.service.model
 Remote-Service: OSGI-INF/LaunchService_EDEF.properties
 Bundle-ActivationPolicy: lazy
-Service-Component: OSGI-INF/com.modumind.spacex.service.extension.LaunchServiceClientRequestFilter.xml,
- OSGI-INF/com.modumind.spacex.service.extension.LaunchServiceObjectMapperResolver.xml
 Require-Bundle: jakarta.ws.rs-api,
  org.eclipse.equinox.http.registry;bundle-version="1.2.0"
+Service-Component: OSGI-INF/com.modumind.spacex.service.extension.LaunchServiceClientRequestFilter.xml,
+ OSGI-INF/com.modumind.spacex.service.extension.LaunchServiceObjectMapperResolver.xml

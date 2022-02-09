@@ -28,9 +28,9 @@ public class LaunchWebPart {
 	}
 
 	private void createBrowser(Composite parent) {
-		this.browser = new Browser(parent, SWT.CHROMIUM);
+		this.browser = new Browser(parent, SWT.NONE);
 		Display.getDefault().asyncExec(() -> {
-			browser.setUrl("http://localhost:8080/spacex/launches.html");
+			browser.setUrl("https://localhost:8080/spacex/launches.html");
 		});
 	}
 }
